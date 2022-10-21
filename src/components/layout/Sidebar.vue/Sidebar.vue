@@ -2,6 +2,13 @@
 <script setup>
 import { ref } from 'vue'
 
+    const props = defineProps({
+        openSidebar: {
+            type: Boolean,
+            required: true
+        }
+    })
+
     const links = ref([
        { name: 'Typography', href: '/typography'},
        { name: 'Button', href: '/button'}
@@ -9,7 +16,9 @@ import { ref } from 'vue'
 </script>
 
 <template>
-    <div class="sidebar">
+    <div :class="['sidebar', {
+        sidebar_isopen: openSidebar
+    }]">
         <RouterLink v-for="link in links" 
             class="sidebar__link"
             :key="link.name" 
@@ -30,7 +39,10 @@ import { ref } from 'vue'
         padding: 20px;
         transition: 0.2s;
         box-shadow: 0px 0px 10px rgba(0,0,0,0.07);
-        transform: translateX(0px);
+        transform: translateX(-250px);
+        &_isopen {
+            transform: translateX(0px);
+        }
         &__link {
             display: block;
             border-radius: 12px;
