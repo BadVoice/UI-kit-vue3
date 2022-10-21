@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <h1 class="heading-1">Hello Vue UI Kit</h1>
-    </div>
+    <h1 class="heading-1">Button</h1>
 </template>
 
 <script setup>
