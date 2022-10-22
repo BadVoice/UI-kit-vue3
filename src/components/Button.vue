@@ -19,6 +19,10 @@
         outlined: {
             type: Boolean,
             required: false
+        },
+        icon: {
+            type: String,
+            required: false
         }
     })
 </script>
@@ -26,11 +30,18 @@
 
 <template>
     <button 
-        :class="['btn', `btn_${color}`, {'btn_rounded': rounded}, 
-        {'btn_outlined': outlined}]"
+        :class="[
+        'btn', `btn_${color}`, {'btn_rounded': rounded}, 
+        {'btn_outlined': outlined},
+        {'btn_icon': icon}
+        
+        ]"
         :disabled="disabled"
         >
-        {{label}}
+        <span v-if="icon"> 
+             <font-awesome-icon :icon="`fa-regular fa-${icon}`" />
+        </span>
+        <span v-else>{{label}}</span>
     </button>
 </template>
 
@@ -105,6 +116,12 @@
             &:hover{
                 color: #fff;
             }
+        }
+        &_icon {
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
         }
     }
     

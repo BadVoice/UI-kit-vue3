@@ -37,6 +37,15 @@
         <Button label="Danger" color="danger" :outlined="true" />
     </div>
 
+    <h2 class="heading-2">Icon</h2>
+    <div class="line">
+        <Button  color="primary" icon="heart" :outlined="true"/>
+        <Button  color="second" icon="hand" />
+        <Button  color="success" icon="address-book" :outlined="true"/>
+        <Button  color="info" icon="credit-card" />
+        <Button  color="warning" icon="lemon" :outlined="true"/>
+        <Button  color="danger" icon="hourglass" />
+    </div>
     
     
     
