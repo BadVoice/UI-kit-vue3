@@ -11,7 +11,8 @@ import { ref } from 'vue'
 
     const links = ref([
        { name: 'Typography', href: '/typography'},
-       { name: 'Button', href: '/button'}
+       { name: 'Button', href: '/button'},
+       { name: 'Checkbox', href: '/checkbox'}
     ])
 </script>
 
@@ -46,13 +47,12 @@ import { ref } from 'vue'
         &__link {
             display: block;
             border-radius: 12px;
-            padding: 10px;
             border: 2px solid #fff;
             transition: 0.2s;
             font-weight: bold;
             margin-bottom: 10px;
             &:hover{
-                border-color: var(--primary)
+                color: var(--primary);
             }
         }
     }
