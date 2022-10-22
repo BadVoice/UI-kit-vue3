@@ -27,6 +27,16 @@
         <Button label="Danger" color="danger" :rounded="true" />
     </div>
 
+    <h2 class="heading-2">Outlined</h2>
+    <div class="line">
+        <Button label="Primary" color="primary" :outlined="true" />
+        <Button label="Secondary" color="second" :outlined="true" />
+        <Button label="Success" color="success" :outlined="true" />
+        <Button label="Info" color="info" :outlined="true" />
+        <Button label="Warning" color="warning" :outlined="true" />
+        <Button label="Danger" color="danger" :outlined="true" />
+    </div>
+
     
     
     

@@ -15,6 +15,10 @@
         disabled: {
             type: Boolean,
             required: false
+        },
+        outlined: {
+            type: Boolean,
+            required: false
         }
     })
 </script>
@@ -22,7 +26,8 @@
 
 <template>
     <button 
-        :class="['btn', `btn_${color}`, {'btn_rounded': rounded}]"
+        :class="['btn', `btn_${color}`, {'btn_rounded': rounded}, 
+        {'btn_outlined': outlined}]"
         :disabled="disabled"
         >
         {{label}}
@@ -92,6 +97,13 @@
             cursor: default;
             &:hover{
                 opacity: .6;
+            }
+        }
+        &_outlined{
+            background: transparent;
+            color: #000;
+            &:hover{
+                color: #fff;
             }
         }
     }
