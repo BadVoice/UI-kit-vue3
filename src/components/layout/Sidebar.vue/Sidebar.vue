@@ -52,7 +52,7 @@ import { ref } from 'vue'
             font-weight: bold;
             margin-bottom: 10px;
             &:hover{
-                border-color: var(--primary-color)
+                border-color: var(--primary)
             }
         }
     }

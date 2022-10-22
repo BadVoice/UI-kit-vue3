@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="heading-1">Hello Vue UI Kit</h1>
+        <h1 class="heading-1">Vue UI Kit</h1>
     </div>
 </template>
 
