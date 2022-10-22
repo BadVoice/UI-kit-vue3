@@ -1,4 +1,5 @@
 <script setup>
+   
     const props = defineProps({
         label: {
             type: String,
@@ -29,6 +30,13 @@
             default: 'normal'
         }
     })
+
+    const emit = defineEmits(['testEventClick'])
+
+    const clickOnButton = () => {
+        emit('testEventClick')
+    }
+
 </script>
 
 
@@ -41,6 +49,7 @@
         {'btn_large': size === 'large'}
         ]"
         :disabled="disabled"
+        @click="clickOnButton"
         >
         <span v-if="icon"> 
              <font-awesome-icon :icon="`fa-regular fa-${icon}`" />

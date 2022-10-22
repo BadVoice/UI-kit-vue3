@@ -52,6 +52,11 @@
         <Button label="Normal" color="primary"/>
         <Button label="Large" color="primary" size="large"/>
     </div>
+
+    <h2 class="heading-2">Event</h2>
+    <div class="line">
+        <Button label="click" color="danger" @testEventClick="eventForButton"/>
+    </div>
     
     
     
@@ -60,6 +65,10 @@
 
 <script setup>
     import Button from '@/components/Button.vue'
+
+    const eventForButton = () => {
+        alert('You clicked danger button')
+    }
 </script>
 
 <style lang="scss" scoped>
