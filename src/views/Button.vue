@@ -46,6 +46,12 @@
         <Button  color="warning" icon="lemon" :outlined="true"/>
         <Button  color="danger" icon="hourglass" />
     </div>
+
+    <h2 class="heading-2">Size</h2>
+    <div class="line">
+        <Button label="Normal" color="primary"/>
+        <Button label="Large" color="primary" size="large"/>
+    </div>
     
     
     

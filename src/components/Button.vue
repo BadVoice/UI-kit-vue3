@@ -23,6 +23,10 @@
         icon: {
             type: String,
             required: false
+        },
+        size: {
+            type: String,
+            default: 'normal'
         }
     })
 </script>
@@ -33,8 +37,8 @@
         :class="[
         'btn', `btn_${color}`, {'btn_rounded': rounded}, 
         {'btn_outlined': outlined},
-        {'btn_icon': icon}
-        
+        {'btn_icon': icon},
+        {'btn_large': size === 'large'}
         ]"
         :disabled="disabled"
         >
@@ -122,6 +126,10 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
+        }
+        &_large{
+            height: 48px;
+            padding: 0 30px;
         }
     }
     
