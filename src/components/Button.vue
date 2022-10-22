@@ -7,13 +7,26 @@
         color: {
             type: String,
             default: 'primary'
+        },
+        rounded: {
+            type: Boolean,
+            required: false
+        }, 
+        disabled: {
+            type: Boolean,
+            required: false
         }
     })
 </script>
 
 
 <template>
-    <button :class="['btn', `btn_${color}`]">{{label}}</button>
+    <button 
+        :class="['btn', `btn_${color}`, {'btn_rounded': rounded}]"
+        :disabled="disabled"
+        >
+        {{label}}
+    </button>
 </template>
 
 
@@ -69,6 +82,16 @@
             border: 1px solid var(--danger);
             &:enabled:hover{
                 background: var(--danger-hover);
+            }
+        }
+        &_rounded {
+            border-radius: 15px;
+        }
+        &:disabled {
+            opacity: .6;
+            cursor: default;
+            &:hover{
+                opacity: .6;
             }
         }
     }
